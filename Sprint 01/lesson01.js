@@ -2,7 +2,6 @@
 //Задачи на закрепление ссылочного типа данных и spread оператора:
 //////////////////////////////////////////////////////////////////
 
-
 //3) У вас есть объект пользователя с информацией о его имени и адресе.
 // Обновите значение города в адресе пользователя(сделайте это иммутабельно, используя spread оператор
 
@@ -12,9 +11,10 @@ const user = {
     },
 }
 
-const updatedUser = {...user, address: {...user.address}};
+const updatedUser = {...user, address: {...user.address, city: 'Toronto'}};
 
-updatedUser.address.city = 'Toronto';
+//TODO:
+// updatedUser.address.city = 'Toronto';
 
 console.log("user: ", user.address.city)
 console.log("updatedUser: ", updatedUser.address.city)
@@ -26,9 +26,12 @@ const originalArray = [1, 2, 3, 4, 5];
 
 const addElementToArray = (numbers, element) => {
 
-    const newArray = [...numbers];
-    newArray.push(element);
-    return newArray;
+    return [...numbers, element];
+
+    //TODO:
+    // const newArray = [...numbers];
+    // newArray.push(element);
+    // return newArray;
 
 }
 
@@ -85,7 +88,7 @@ printPersonDetails(person);  // Вывод: Name: Alice, Age: 30
 
 const car = {brand: 'Toyota', model: 'Camry'};
 
-const {brand, model, year = 2022} = car;
+const {brand, model, year = '2022'} = car;
 
 console.log(brand);  // 'Toyota'
 console.log(model);  // 'Camry'
@@ -99,7 +102,10 @@ const students = [
     {name: 'Chris', grade: 'C'},
 ];
 
-const [student1,,student3]= students
+// TODO:
+//  const [student1,,student3]= students
+
+const [{ name: student1 }, , { name: student3 }] = students;
 
 console.log(student1);  // 'Alex'
 console.log(student3);  // 'Chris'
