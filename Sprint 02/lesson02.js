@@ -156,7 +156,7 @@ let fruits = ['apple', 'banana', 'orange', 'kiwi'];
 console.log(checkElement(numbers, 3)); // Output: true
 console.log(checkElement(fruits, 'grape')); // Output: false
 
-10. Напишите функцию JavaScript, которая фильтрует массив чисел
-и возвращает только те элементы, которые больше заданного значения.
+// 10. Напишите функцию JavaScript, которая фильтрует массив чисел
+// и возвращает только те элементы, которые больше заданного значения.
 
 
